@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.env/
+
+# MLflow local tracking data
+mlflow.db
+mlruns/
+mlartifacts/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Testing and cache
+.pytest_cache/
+.coverage

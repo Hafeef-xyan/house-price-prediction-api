@@ -9,6 +9,7 @@ from fastapi import Request
 # Connect to MLflow
 mlflow.set_tracking_uri("http://host.docker.internal:5000")
 
+
 # Load registered model
 def load_model():
     return mlflow.sklearn.load_model(

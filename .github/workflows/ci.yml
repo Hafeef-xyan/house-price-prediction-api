@@ -25,3 +25,6 @@ jobs:
 
       - name: Check FastAPI application imports
         run: python -c "import app; print('FastAPI app imported successfully')"
+  
+      - name: Run API tests
+        run: python -m pytest tests/ -v

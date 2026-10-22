@@ -16,13 +16,12 @@ def load_model():
         "models:/House_price_prediction/1"
     )
 
-app = FastAPI(title='House price prediction API')
-
 from contextlib import asynccontextmanager
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.model = load_model()
+    if not hasattr(app.state, "model"):
+        app.state.model = load_model()
     yield
 
 app = FastAPI(
